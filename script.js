@@ -9,14 +9,27 @@ const palavras = [
     "LIVRO"
 ];
 
-const palavra = palavras[Math.floor(Math.random() * palavras.length)];
-
+let palavra = "";
 let letrasCorretas = [];
 let erros = 0;
 let jogoFinalizado = false;
 
-// Mostra a palavra escondida ao carregar a página
-mostrarPalavra();
+novaPartida();
+
+function novaPartida() {
+
+    palavra = palavras[Math.floor(Math.random() * palavras.length)];
+
+    letrasCorretas = [];
+    erros = 0;
+    jogoFinalizado = false;
+
+    document.getElementById("mensagem").innerHTML = "";
+    document.getElementById("erros").innerHTML = "Erros: 0/6";
+    document.getElementById("letra").value = "";
+
+    mostrarPalavra();
+}
 
 function mostrarPalavra() {
 

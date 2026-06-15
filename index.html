@@ -2,6 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Forca</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,9 +16,16 @@
 
     <br>
 
-    <input type="text" id="letra" maxlength="1">
+    <input
+        type="text"
+        id="letra"
+        maxlength="1"
+        placeholder="Digite uma letra"
+    >
 
     <button onclick="jogar()">Enviar</button>
+
+    <button onclick="novaPartida()">Nova Partida</button>
 
     <p id="mensagem"></p>
 
