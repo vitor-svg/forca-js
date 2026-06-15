@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+}
+
+#palavra{
+    font-size: 30px;
+    letter-spacing: 10px;
+}
