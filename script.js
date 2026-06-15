@@ -1,10 +1,12 @@
 const palavra = "CASA";
 let letrasCorretas = [];
+let erros = 0;
 
 // Mostra a palavra escondida ao carregar a página
 mostrarPalavra();
 
 function mostrarPalavra() {
+
     let resultado = "";
 
     for (let i = 0; i < palavra.length; i++) {
@@ -41,8 +43,13 @@ function jogar() {
 
     } else {
 
+        erros++;
+
         document.getElementById("mensagem").innerHTML =
         "A letra não existe na palavra!";
+
+        document.getElementById("erros").innerHTML =
+        "Erros: " + erros + "/6";
 
     }
 
