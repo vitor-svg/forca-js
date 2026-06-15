@@ -1,4 +1,16 @@
-const palavra = "CASA";
+const palavras = [
+    "CASA",
+    "ESCOLA",
+    "CARRO",
+    "COMPUTADOR",
+    "CADEIRA",
+    "CELULAR",
+    "JANELA",
+    "LIVRO"
+];
+
+const palavra = palavras[Math.floor(Math.random() * palavras.length)];
+
 let letrasCorretas = [];
 let erros = 0;
 let jogoFinalizado = false;
@@ -33,6 +45,7 @@ function verificarVitoria() {
 
         if (!letrasCorretas.includes(palavra[i])) {
             venceu = false;
+            break;
         }
 
     }
